@@ -1,3 +1,6 @@
+// Default Grid to start with
+makeGrid(10, 10);
+
 // Create the Grid Table when click on submit button
 document.getElementById('sizePicker').onsubmit =  () => {   
     //submit form
