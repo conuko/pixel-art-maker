@@ -11,6 +11,8 @@ function form() {
     const gridWidth = document.getElementById('inputWidth').value;
     // get height for grid
     const gridHeight = document.getElementById('inputHeight').value;
+    // function call to make a grid
+    makeGrid(gridWidth, gridHeight);
 }
 
 function makeGrid(width, height) {
