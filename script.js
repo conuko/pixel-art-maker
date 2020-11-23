@@ -13,6 +13,29 @@ function form() {
     const gridHeight = document.getElementById('inputHeight').value;
 }
 
+function makeGrid(width, height) {
+    let grid = "";
+    // get table to place grid
+    const gridTable = document.getElementById('pixelCanvas');
+    // Iterate Over rows with the height from the gridHeight input
+    for (let i = 0; i < height; i++) {
+        // add table row
+        grid += '<tr class="row-' + i + '">';
+        // Iteration over column with the width from the gridWidth input
+        for (let j = 0; j < width; j++) {
+            // add table data for columns/cells
+            grid += '<td class="cell"></td>';
+        }
+        // end table row
+        grid += '</tr>';
+    }
+    // place grid in table
+    gridTable.innerHTML = grid;
+
+    // function call to add event listener to each cell
+    eventForCells();
+}
+
 // Event listener of each of grid's cell to make it possible to give color to the clicked cells
 function eventForCells() {
     // get all cells
